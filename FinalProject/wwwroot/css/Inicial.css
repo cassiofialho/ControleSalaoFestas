@@ -1,0 +1,99 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--body-color);
+}
+
+.container-pai {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 1px solid #707070;
+    height: 50%;
+    width: 30%;
+    border-radius: 50px 0px 50px 0px;
+    box-shadow: 1px 3px 12px 1px;
+}
+
+.formulario {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px;
+}
+    .formulario .titulo {
+        margin: 5% auto;
+    }
+
+    .formulario .conjunto{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2% auto;
+    }
+
+.campo {
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+}
+
+    .campo input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #000;
+        height: 35px;
+        width: 80%;
+        margin: 10px;
+        background: transparent;
+        color: #000;
+        letter-spacing: 3px;
+        padding: 10px 0px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+.formulario .campo label {
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    padding: 10px 0px;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.formulario button {
+    margin-top: 70px;
+    border: none;
+    border-radius: 6px;
+    height: 70px;
+    width: 220px;
+    font-size: 15px;
+    cursor: pointer;
+    background: #695CFE;
+    color: #fff;
+}
+
+.link{
+    text-decoration: none;
+}

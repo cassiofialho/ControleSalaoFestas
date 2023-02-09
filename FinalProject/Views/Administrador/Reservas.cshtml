@@ -1,0 +1,58 @@
+﻿@model List<FinalProject.Models.Domains.Reserva>
+
+@{
+    Layout = "_Layout";
+}
+
+<style>
+    .container_filho{
+        position: relative;
+        height: 80%;
+        top: 10%;
+        width: 90%;
+        border: 1px solid;
+        border-radius: 20px;
+        background: gainsboro;
+        box-shadow: 1px 2px 10px 0.5px;
+    }
+
+    h1{
+        margin: 2% auto;
+        text-align: center;
+        font-size: 28px;
+    } 
+
+    .tabela{
+        padding: 40px;
+    }
+</style>
+
+<div class="container_filho">
+    <h1>Reservas</h1>
+    <div class="tabela">
+        <table id="example" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Responsável reserva</th>
+                    <th>Email responsável</th>
+                    <th>Telefone responsável</th>
+                    <th>Número Apartamento</th>
+                    <th>Data da reserva</th>
+                </tr>
+            </thead>     
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Morador.Nome</td>
+                        <td>@item.Morador.Email</td>
+                        <td>@item.Morador.Telefone</td>
+                        <td>@item.Morador.numeroApartamento</td>
+                        <td>@item.DtReserva.ToString("dd/MM/yyyy")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

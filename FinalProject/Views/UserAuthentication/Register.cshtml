@@ -1,0 +1,62 @@
+﻿@model FinalProject.Models.Domains.Morador
+
+@{
+    Layout = "_LayoutInicial";
+}
+
+<div class="container-pai">
+    <div class="container" style="width: 50%; height: 80%;">
+        <form asp-action="Register" method="post" class="formulario">
+            <div class="titulo">
+                <h2>Cadastro</h2>
+            </div>
+
+            <div class="conjunto">        
+                <div class="campo">
+                    <label asp-for="Nome" class="form-label">Nome Completo</label>
+                    <input type="text" class="form-control" asp-for="Nome">
+                </div>
+
+                <div class="campo">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input type="email" class="form-control" asp-for="Email">
+                </div>
+
+            </div>
+
+            <div class="conjunto">
+                <div class="campo">
+                    <label asp-for="Telefone" class="form-label">Telefone</label>
+                    <input type="tel" class="form-control" asp-for="Telefone">
+                </div>
+
+                <div class="campo">
+                    <label asp-for="RG" class="form-label">RG</label>
+                    <input type="text" class="form-control" asp-for="RG">
+                </div>
+
+                <div class="campo">
+                    <label asp-for="numeroApartamento" class="form-label">Número Apartamento</label>
+                    <input type="text" class="form-control" asp-for="numeroApartamento">
+                </div>
+            </div>
+
+
+            <div class="conjunto">
+                <div class="campo">
+                    <label asp-for="Senha" class="form-label">Senha</label>
+                    <input type="password" class="form-control" asp-for="Senha">
+                </div>
+
+                <div class="campo">
+                    <label asp-for="ConfirmarSenha" class="form-label">Confirmar Senha</label>
+                    <input type="password" class="form-control" asp-for="ConfirmarSenha">
+                </div>
+            </div>
+
+                    <input asp-for="Acesso" type="hidden" readonly value="Morador"/>
+
+            <button class="btn btn-primary" type="submit">Cadastrar</button>  
+        </form>
+    </div>
+</div>
